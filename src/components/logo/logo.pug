@@ -1,16 +1,4 @@
 mixin logo(options = {})
-  - 
-    const { size = 'big' } = options;
-
-    const sizeModifiers = {
-      small: 'logo_size_small',
-      big: 'logo_size_big'
-    }
-
-    const classes = [
-      sizeModifiers[size],
-    ]
-
-  .logo(class = classes)
+  .logo
     img.logo__img(src='../../components/logo/big-logo.svg' alt='logo')
 

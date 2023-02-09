@@ -4,6 +4,7 @@
 @import "../../components/logo/logo";
 @import "../../components/button/button";
 @import "../../components/header/header";
+@import "../../components/header-minimized/header-minimized";
 @import "../../components/nav-menu/nav-menu";
 @import "../../components/main-gallery/main-gallery";
 @import "../../components/advantages/advantages";
@@ -15,6 +16,20 @@
 
 .home {
   flex: 1 0 auto;
+
+  &__minimized-header {
+    display: none;
+    @media (min-width: 831px) {
+      position: fixed;
+      top: 0;
+      z-index: 5;
+      display: block;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+  }
 
   &__advantages {
     position: relative;

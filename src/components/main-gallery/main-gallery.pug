@@ -3,6 +3,13 @@ include ../logo/logo.pug
 include ../nav-menu/nav-menu.pug
 
 mixin main-gallery(options = {})
-  //- - const { modifier = 'registered' } = options
-
   .main-gallery
+    .main-gallery__slider.js-main-gallery__slider
+      .main-gallery__slider-item
+        img(src="../../components/main-gallery/img1.jpg" alt="First slide").main-gallery__slider-image
+      .main-gallery__slider-item
+        img(src="../../components/main-gallery/img2.jpg" alt="Second slide").main-gallery__slider-image
+      .main-gallery__slider-item
+        img(src="../../components/main-gallery/img3.jpg" alt="Third slide").main-gallery__slider-image
+    .main-gallery__slider-dots-box.js-main-gallery__slider-dots-box
+    

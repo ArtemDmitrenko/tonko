@@ -1,6 +1,7 @@
 include ../../components/logo/logo.pug
 include ../../components/button/button.pug
 include ../../components/header/header.pug
+include ../../components/header-minimized/header-minimized.pug
 include ../../components/main-gallery/main-gallery.pug
 include ../../components/advantages/advantages.pug
 include ../../components/product-card/product-card.pug
@@ -18,10 +19,11 @@ html(lang="en")
     <link rel="stylesheet" type="text/css" href="../../../node_modules/slick-carousel/slick/slick.css"/>
   title Pages
   body
+    .home__minimized-header.js-home__minimized-header
+      +header-minimized()
     +header()
-
     main.home
-      section.home__gallery
+      section.home__gallery.js-home__gallery
         +main-gallery()
       section.home__advantages
         +advantages({advantagesDesktop: ['Премиальное качество и натуральные ингредиенты', 'Персонализация свечей и диффузоров на любом языке', 'Ароматические композиции от ведущих французских парфюмеров'], advantagesMobile: ['Персонализация подарка', 'Премиальное качество', 'Всемирно известные парфюмеры']})
@@ -43,9 +45,7 @@ html(lang="en")
           +products-slider({title: 'Здесь может быть любая подборка'})
         .home__present
           +present-card({imgName: 'corporate', title: 'Предложение для корпоративных клиентов', descriptions: ["Выберите свечу или диффузор из коллекции", "Укажите имя или пожелание для гравировки", "Выберите подарочную упаковку"], buttonText: "Подробнее"})
-
     +footer()
-
 
     script(src="../../../node_modules/jquery/dist/jquery.min.js")
     script(type='module' src='./main.js')

@@ -3,106 +3,69 @@ include ../logo/logo.pug
 include ../nav-menu/nav-menu.pug
 
 mixin header(options = {})
+
   - const { modifier = 'registered' } = options
-  - 
-    const menuItems = [
-    {
-      title: "Продукция",
-      submenu: [
-        {
-          subtitle: "Свечи",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Диффузоры",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Парфюм для дома",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Саше",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Уход для рук",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Уход для тела",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Наборы",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Вся продукция",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Новинки",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Бестселлеры",
-          sublink: "https://www.mock-link.com/"
-        },
-        {
-          subtitle: "Outlet",
-          sublink: "https://www.mock-link.com/"
-        }
-      ],
-    },
-    {
-      title: "Мир тонка",
-      link: "https://www.mock-link.com/"
-    },
-    {
-      title: "Для компаний",
-      link: "https://www.mock-link.com/"
-    },
-    {
-      title: "Контактное производство",
-      link: "https://www.mock-link.com/"
-    },
-    {
-      title: "Аромамаркетинг",
-      link: "https://www.mock-link.com/"
-    },
-    {
-      title: "Где купить",
-      link: "https://www.mock-link.com/"
-    }]
-  //- - const menuItems = require('./menu-items.json')
 
   header.header.js-header
-    .header__container.js-header__container
+    .header__container
       .header__content
-        .header__contacts 
-          a(href='tel:+79857661289').header__phone +7 985 766 12 89
-        .header__main
-          .header__logo 
-            +logo()
+        .header__upper-part
+          .header__burger.js-header__burger
+          .header__contacts 
+            a(href='tel:+79857661289').header__phone +7 985 766 12 89
+          .header__main
+            .header__logo 
+              +logo()
+
+          .header__user
+            if modifier === 'registered'
+              .header__user-profile
+                +button({
+                  style: 'withIcon',
+                  icon: 'profile',
+                  name: 'button',
+                  text: '',
+                  type: 'button'
+                })
+              .header__user-basket
+                +button({
+                  style: 'withIcon',
+                  icon: 'basket',
+                  name: 'button',
+                  text: '',
+                  type: 'button'
+                })
+        .header__lower-part
           .header__menu
             +nav-menu({menuItems})
 
-        .header__user
-          if modifier === 'registered'
-            +button({
-              style: 'withIcon',
-              icon: 'profile',
-              name: 'button',
-              text: '',
-              type: 'button'
-            })
-            +button({
-              style: 'withIcon',
-              icon: 'basket',
-              name: 'button',
-              text: '',
-              type: 'button'
-            })
-        .header__burger.js-header__burger
-          span.header__burger-element
+    .header__mobile-menu.js-header__mobile-menu
+      nav.header__mobile-menu-block
+        ul.header__mobile-mene-list
+          each item in menuItems
+            - const { title, link, submenu } = item
+            if !submenu
+              li.header__mobile-menu-item
+                a.header__mobile-menu-link(href = link)= title
+            else
+              li.header__mobile-menu-item_with-sublist
+                button.header__mobile-menu-list-button.js-header__mobile-menu-list-button= title
+                ul.header__mobile-menu-sublist.js-header__mobile-menu-sublist
+                  each subItem in submenu
+                    - const { subtitle, sublink, isBold } = subItem
+                    li.header__mobile-menu-sub-item
+                      a(href = sublink class = isBold ? "header__mobile-menu-sub-link_bold" : "").header__mobile-menu-sub-link= subtitle
+
+
+      .header__mobile-menu-profile
+        button.header__mobile-menu-profile-button Личный кабинет
+      .header__mobile-menu-contacts
+        .header__mobile-menu-contacts-left
+          button.header__mobile-menu-button-call Обратный звонок
+          button.header__mobile-menu-button-whatsapp WhatsApp
+          a(href='mailto:info@tonkaperfumes.ru').header__mobile-menu-button-email info@tonkaperfumes.ru
+        .header__mobile-menu-contacts-right
+          a(href='tel:+79857661289').footer__phone +7 985 766 12 89
+
+
+

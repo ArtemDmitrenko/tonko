@@ -1,22 +1,17 @@
-import NavMenu from "Components/nav-menu/nav-menu";
+import MobileSubmenu from './mobileSubmenu'
 
 export default class Header {
-  constructor(item) {
+  constructor(item, handleBurgerMenuClick) {
     this.item = item;
+    this.handleBurgerMenuClick = handleBurgerMenuClick
     this.init();
     this.addEventListeners();
   }
 
   init() {
     this.burger = this.item.querySelector(".js-header__burger");
-    this.navMenuButtons = this.item.querySelector(
-      ".js-header__with-nav-menu-buttons"
-    );
-    this.navMenu = new NavMenu(this.navMenuButtons);
-    this.menuLinks = this.navMenu.navLinks;
-    this.headerContainer = this.item.querySelector(".js-header__container");
-    this.headerBurger =
-      this.headerContainer.querySelector(".js-header__burger");
+    this.mobileMenu = this.item.querySelector(".js-header__mobile-menu");
+    this.mobileSubmenuButtons = this.item.querySelectorAll(".js-header__mobile-menu-list-button");
   }
 
   addEventListeners() {
@@ -25,8 +20,11 @@ export default class Header {
 
   handleBurgerClick = () => {
     $(this.burger).toggleClass("header_with-opened-burger");
-    $(this.navMenuButtons).toggleClass("header__with-opened-menu");
-    $(this.headerContainer).toggleClass("header__container_opened");
-    $(this.headerBurger).toggleClass("header__burger_opened");
+    $(this.mobileMenu).toggleClass("header__mobile-menu_opened");
+    this.handleBurgerMenuClick()
+    this.mobileSubmenuButtons.forEach((mobileSubmenuButton) => {
+      const mobileSubmenu = mobileSubmenuButton.nextElementSibling
+      new MobileSubmenu(mobileSubmenuButton, mobileSubmenu);
+    });
   };
 }

@@ -36,24 +36,23 @@
       },
       {
         "subtitle": "Новинки",
-        "sublink": "https://www.mock-link.com/"
+        "sublink": "https://www.mock-link.com/",
+        "isBold": "true"
       },
       {
         "subtitle": "Бестселлеры",
-        "sublink": "https://www.mock-link.com/"
+        "sublink": "https://www.mock-link.com/",
+        "isBold": "true"
       },
       {
         "subtitle": "Outlet",
-        "sublink": "https://www.mock-link.com/"
+        "sublink": "https://www.mock-link.com/",
+        "isBold": "true"
       }
     ]
   },
   {
     "title": "Мир тонка",
-    "link": "https://www.mock-link.com/"
-  },
-  {
-    "title": "Мирыапкппепкркрекн",
     "link": "https://www.mock-link.com/"
   },
   {

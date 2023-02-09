@@ -1,9 +1,74 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
 .main-gallery {
-  height: 600px;
-  background: url("../../components/main-gallery/img1.jpg");
-  background-position: center;
-  background-size: cover;
-  @media (max-width: 768px) {
-    height: 250px;
+  @media (max-width: 830px) {
+    padding-top: 52px;
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slider-image {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    max-height: 600px;
+    object-fit: cover;
+  }
+
+  &__slider-dots-box {
+    position: relative;
+  }
+
+  &__slider-dots {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 112px;
+    transform: translateX(-50%);
+
+    & button {
+      position: relative;
+      width: 31px;
+      height: 31px;
+      color: #3c3c3c;
+      font-weight: 500;
+      font-size: 12px;
+      font-family: "Futura PT";
+      font-style: normal;
+      line-height: 100%;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      cursor: pointer;
+
+      & svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+
+    & .slick-active svg circle {
+      animation-name: circle-progress;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@keyframes circle-progress {
+  from {
+    stroke-dasharray: 0, 95.5;
+  }
+
+  to {
+    stroke-dasharray: 95.5, 95.5;
   }
 }
