@@ -1,0 +1,21 @@
+mixin nav-menu(options = {})
+  - const { menuItems } = options
+
+  nav.nav-menu.js-nav-menu
+    ul.nav-menu__list
+      each item in menuItems
+        - const { title, link, submenu } = item
+        li.nav-menu__item
+          a.nav-menu__link.js-nav-menu__link(href = link)= title
+        //- if !submenu
+        //-   li.nav-menu__item
+        //-     a.nav-menu__link.js-nav-menu__link(href = link)= title
+        //- else
+        //-   li.nav-menu__item.js-nav-menu__item_with-dropdown 
+        //-     .nav-menu__link.js-nav-menu__link= title
+        //-       span.nav-menu__checkmark.js-nav-menu__checkmark expand_more
+        //-     ul.nav-menu__sub-list.js-nav-menu__sub-list
+        //-       each subItem in submenu
+        //-         - const { sublink, subtitle } = subItem
+        //-         li.nav-menu__sub-item
+        //-           a.nav-menu__sub-link(href = sublink)= subtitle

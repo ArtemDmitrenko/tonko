@@ -1,0 +1,154 @@
+.footer {
+  flex: 0 0 auto;
+  background-color: white;
+
+  &__container {
+    max-width: 1588px;
+    margin: 0 auto;
+    padding: 48px 155px 56px;
+
+    @media (max-width: 1000px) {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+    @media (max-width: 768px) {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+    @media (max-width: 575px) {
+      padding: 32px 24px;
+    }
+  }
+
+  &__contacts-block {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 575px) {
+      flex-direction: column;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    @media (max-width: 1080px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__phone {
+    margin-right: 16px;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    @media (max-width: 1080px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__button-call {
+    margin-right: 16px;
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    cursor: pointer;
+
+    &::before {
+      margin-right: 8px;
+      vertical-align: middle;
+      content: url("../../components/footer/call.svg");
+    }
+    @media (max-width: 1080px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__button-whatsapp {
+    margin-right: 16px;
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    cursor: pointer;
+
+    &::before {
+      margin-right: 8px;
+      vertical-align: middle;
+      content: url("../../components/footer/whatsup.svg");
+    }
+    @media (max-width: 1080px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__button-email {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    cursor: pointer;
+
+    &::before {
+      margin-right: 8px;
+      vertical-align: middle;
+      content: url("../../components/footer/email.svg");
+    }
+  }
+
+  &__address-block {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  &__copyright {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  &__link {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    @media (max-width: 575px) {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    @media (max-width: 575px) {
+      flex-direction: column;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+    @media (max-width: 575px) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__address-block {
+    margin: 48px 0;
+    @media (max-width: 575px) {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.logo {
+  &__img {
+    width: 100%;
+  }
+
+  &_size {
+    &_small {
+      width: 140px;
+    }
+
+    &_big {
+      width: 252px;
+    }
+  }
+}

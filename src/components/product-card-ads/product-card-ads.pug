@@ -1,0 +1,29 @@
+include ../button/button.pug
+
+mixin product-card-ads(options = {})
+  - 
+    const { 
+      title = '',
+      description = '',
+      imgName = '',
+    } = options
+
+  .product-card-ads
+    .product-card-ads__content
+      .product-card-ads__image-block
+        img(
+          src=`./images/${imgName}.jpg`
+          alt=`${imgName}`
+        ).product-card-ads__image
+      .product-card-ads__text-block
+        p.product-card-ads__title= title
+        p.product-card-ads__description= description
+      .product-card-ads__button
+        +button({
+          style: 'texted',
+          name: 'button',
+          text: 'Заказать',
+          type: 'button'
+        })
+
+

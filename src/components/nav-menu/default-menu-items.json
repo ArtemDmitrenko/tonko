@@ -1,0 +1,34 @@
+[
+  {
+    "title": "О нас",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Услуги",
+    "submenu": [
+      { "subtitle": "Услуга 1", "sublink": "https://www.mock-link.com/" },
+      {
+        "subtitle": "Услуга 2",
+        "sublink": "https://www.mock-link.com/"
+      }
+    ]
+  },
+  {
+    "title": "Вакансии",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Новости",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Соглашения",
+    "submenu": [
+      { "subtitle": "Соглашение 1", "sublink": "https://www.mock-link.com/" },
+      {
+        "subtitle": "Соглашение 2",
+        "sublink": "https://www.mock-link.com/"
+      }
+    ]
+  }
+]

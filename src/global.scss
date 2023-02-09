@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+  font-family: "Futura PT";
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: unset;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}

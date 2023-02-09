@@ -1,0 +1,51 @@
+include ../../components/logo/logo.pug
+include ../../components/button/button.pug
+include ../../components/header/header.pug
+include ../../components/main-gallery/main-gallery.pug
+include ../../components/advantages/advantages.pug
+include ../../components/product-card/product-card.pug
+include ../../components/present-card/present-card.pug
+include ../../components/product-card-ads/product-card-ads.pug
+include ../../components/products-slider/products-slider.pug
+include ../../components/footer/footer.pug
+
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    <link rel="stylesheet" type="text/css" href="../../../node_modules/slick-carousel/slick/slick.css"/>
+  title Pages
+  body
+    +header()
+
+    main.home
+      section.home__gallery
+        +main-gallery()
+      section.home__advantages
+        +advantages({advantagesDesktop: ['Премиальное качество и натуральные ингредиенты', 'Персонализация свечей и диффузоров на любом языке', 'Ароматические композиции от ведущих французских парфюмеров'], advantagesMobile: ['Персонализация подарка', 'Премиальное качество', 'Всемирно известные парфюмеры']})
+      section.home__new-products
+        .home__products-slider.js-home__products-slider
+          +products-slider({title: 'Новинки'})
+        .home__present
+          +present-card({imgName: 'present', title: 'Добавьте индивидуальность подарку', descriptions: ["Выберите свечу или диффузор из коллекции", "Укажите имя или пожелание для гравировки", "Выберите подарочную упаковку"], buttonText: "Выбрать подарок"})
+      section.home__special-offers
+        .home__products-slider.js-home__products-slider
+          +products-slider({title: 'Специальные предложения'})
+        .home__products
+          .home__products-item
+            +product-card-ads({imgName: 'ads2', title: 'Свечи', description: "Достаточно зажечь, и дом наполнится роскошным ароматом"})
+          .home__products-item
+            +product-card-ads({imgName: 'ads1', title: 'Диффузоры', description: "Изящное решение для долговременной ароматизации"})
+      section.home__any
+        .home__products-slider.js-home__products-slider
+          +products-slider({title: 'Здесь может быть любая подборка'})
+        .home__present
+          +present-card({imgName: 'corporate', title: 'Предложение для корпоративных клиентов', descriptions: ["Выберите свечу или диффузор из коллекции", "Укажите имя или пожелание для гравировки", "Выберите подарочную упаковку"], buttonText: "Подробнее"})
+
+    +footer()
+
+
+    script(src="../../../node_modules/jquery/dist/jquery.min.js")
+    script(type='module' src='./main.js')

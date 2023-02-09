@@ -1,0 +1,72 @@
+.present-card {
+  &__content {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__image-block {
+    max-width: 840px;
+    height: 500px;
+    @media (max-width: 768px) {
+      max-width: none;
+      height: 259px;
+      margin: 0 -24px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    margin-left: 36px;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 32px;
+    font-style: normal;
+    line-height: 110%;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-size: 24px;
+    }
+  }
+
+  &__descriptions-list {
+    margin-bottom: 36px;
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__description {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 120%;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+      @media (max-width: 768px) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "tonka",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel src/pages/content/index.pug",
+    "build": "parcel build src/pages/content/index.pug --public-url ./ --no-content-hash"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upside-2/tonkaperfumes_front.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/upside-2/tonkaperfumes_front/issues"
+  },
+  "homepage": "https://github.com/upside-2/tonkaperfumes_front#readme",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@parcel/transformer-pug": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.4",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-order": "^6.0.1",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.3.0"
+  },
+  "dependencies": {
+    "jquery": "^3.6.3",
+    "node-sass": "^8.0.0",
+    "pug": "^3.0.2",
+    "slick-carousel": "^1.8.1",
+    "stylelint-config-standard-scss": "^6.1.0"
+  }
+}

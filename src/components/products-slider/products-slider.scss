@@ -1,0 +1,129 @@
+.products-slider {
+  &__title-block {
+    display: flex;
+    margin-bottom: 24px;
+    @media (max-width: 768px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    margin-right: 10px;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    &::after {
+      display: inline-block;
+      width: 18px;
+      height: 1px;
+      margin-right: 16px;
+      margin-left: 16px;
+      vertical-align: super;
+      background-color: $primary-color;
+      transform: rotate(-58.64deg);
+      content: "";
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__slider {
+    margin: 0 -16px;
+    @media (max-width: 768px) {
+      margin: 0 -2px;
+    }
+
+    .slick-slide {
+      @media (max-width: 1000px) {
+        max-width: 400px;
+      }
+      @media (max-width: 550px) {
+        max-width: 200px;
+      }
+    }
+  }
+
+  &__slider-item {
+    padding: 0 16px;
+    @media (max-width: 768px) {
+      padding: 0 2px;
+    }
+  }
+
+  &__slider-button {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $transition;
+
+    @media (max-width: 769px) {
+      display: none;
+    }
+
+    &_prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-left: -50px;
+      transform: translateY(-50%);
+
+      &::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid $primary-color;
+        border-left: 2px solid $primary-color;
+        transform: translateX(-30%) translateY(-50%) rotate(45deg);
+        transform-origin: center;
+        content: "";
+      }
+
+      &:hover {
+        background: $primary-color;
+
+        &::before {
+          border-bottom: 2px solid white;
+          border-left: 2px solid white;
+        }
+      }
+    }
+
+    &_next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-right: -50px;
+      transform: translateY(-50%);
+
+      &::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid $primary-color;
+        border-left: 2px solid $primary-color;
+        transform: translateX(-60%) translateY(-50%) rotate(-135deg);
+        transform-origin: center;
+        content: "";
+      }
+
+      &:hover {
+        background: $primary-color;
+
+        &::before {
+          border-bottom: 2px solid white;
+          border-left: 2px solid white;
+        }
+      }
+    }
+  }
+}

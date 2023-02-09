@@ -1,0 +1,39 @@
+$address: "../../fonts";
+
+@mixin font-face($family-name, $file-name, $address, $weight, $style) {
+  font-weight: $weight;
+  font-family: "#{$family-name}";
+  font-style: $style;
+  src: url("#{$address}/#{$file-name}.eot");
+  src: local("☺"), url("#{$address}/#{$file-name}.woff") format("woff"),
+    url("#{$address}/#{$file-name}.ttf") format("truetype");
+  // url("#{$address}/#{$file-name}.svg") format("svg");
+}
+
+@font-face {
+  @include font-face("Futura PT", "futura-pt-book", $address, 400, "normal");
+}
+
+@font-face {
+  @include font-face("Futura PT", "futura-pt-medium", $address, 450, "normal");
+}
+
+@font-face {
+  @include font-face("Futura PT", "futura-pt-demi", $address, 500, "normal");
+}
+
+@mixin font($f-family1, $f-family2, $f-size, $color, $weight) {
+  color: $color;
+  font-weight: $weight;
+  font-size: $f-size;
+  font-family: $f-family1, $f-family2, sans-serif;
+}
+
+%font-body {
+  @include font("Futura PT", "Arial", 16px, #3c3c3c, 400);
+}
+
+%title {
+  @include font("Futura PT", "Arial", 14px, #3c3c3c, 500);
+  text-transform: uppercase;
+}

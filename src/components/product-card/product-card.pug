@@ -1,0 +1,46 @@
+include ../button/button.pug
+
+mixin product-card(options = {})
+  - 
+    const { 
+      title = '',
+      price = '',
+      imgName = '',
+      note = null,
+      oldPrice = null,
+      backgroundColor = ''
+    } = options
+
+    const backgroundColorModifiers = {
+      blue: "product-card__image-block_color_blue",
+      yellow: "product-card__image-block_color_yellow",
+      grey: "product-card__image-block_color_grey",
+    }
+
+    const backgroundClass = backgroundColorModifiers[backgroundColor]
+
+  .product-card
+    .product-card__content
+      .product-card__image-block(class = backgroundClass)
+        img(
+          src=`./images/${imgName}.png`
+          alt=`Product image ${imgName}`
+        ).product-card__image
+        if note 
+          span.product-card__note= note
+      .product-card__text-block
+        p.product-card__title= title
+        .product-card__price-block
+          p.product-card__price= `${price}\u00A0руб.`
+          if oldPrice
+            p.product-card__old-price= `${oldPrice}\u00A0руб.`
+
+      .product-card__button
+        +button({
+          style: 'bordered',
+          name: 'button',
+          text: 'Купить',
+          type: 'button'
+        })
+
+

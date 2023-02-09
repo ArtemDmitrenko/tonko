@@ -1,0 +1,9 @@
+.main-gallery {
+  height: 600px;
+  background: url("../../components/main-gallery/img1.jpg");
+  background-position: center;
+  background-size: cover;
+  @media (max-width: 768px) {
+    height: 250px;
+  }
+}

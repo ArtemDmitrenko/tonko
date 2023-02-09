@@ -1,0 +1,175 @@
+@import "../../fonts";
+@import "../../variables";
+@import "../../global";
+@import "../../components/logo/logo";
+@import "../../components/button/button";
+@import "../../components/header/header";
+@import "../../components/nav-menu/nav-menu";
+@import "../../components/main-gallery/main-gallery";
+@import "../../components/advantages/advantages";
+@import "../../components/product-card/product-card";
+@import "../../components/present-card/present-card";
+@import "../../components/product-card-ads/product-card-ads";
+@import "../../components/products-slider/products-slider";
+@import "../../components/footer/footer";
+
+.home {
+  flex: 1 0 auto;
+
+  &__advantages {
+    position: relative;
+    max-width: 1588px;
+    margin: 0 auto;
+    padding-right: 155px;
+    padding-left: 155px;
+
+    &::after {
+      position: absolute;
+      width: calc(100% - 310px);
+      height: 1px;
+      background-color: #caced2;
+      content: "";
+      @media (max-width: 1000px) {
+        width: calc(100% - 240px);
+      }
+      @media (max-width: 768px) {
+        width: calc(100% - 48px);
+      }
+    }
+    @media (max-width: 1000px) {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+    @media (max-width: 768px) {
+      padding: 0 24px;
+    }
+  }
+
+  &__new-products {
+    position: relative;
+    max-width: 1588px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-right: 155px;
+    padding-left: 155px;
+
+    &::after {
+      position: absolute;
+      width: calc(100% - 310px);
+      height: 1px;
+      background-color: #caced2;
+      content: "";
+      @media (max-width: 1000px) {
+        width: calc(100% - 240px);
+      }
+      @media (max-width: 768px) {
+        width: calc(100% - 48px);
+      }
+    }
+    @media (max-width: 1000px) {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+    @media (max-width: 768px) {
+      padding: 24px 24px 0;
+    }
+  }
+
+  &__special-offers {
+    position: relative;
+    max-width: 1588px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-right: 155px;
+    padding-left: 155px;
+
+    &::after {
+      position: absolute;
+      width: calc(100% - 310px);
+      height: 1px;
+      background-color: #caced2;
+      content: "";
+      @media (max-width: 1000px) {
+        width: calc(100% - 240px);
+      }
+      @media (max-width: 768px) {
+        width: calc(100% - 48px);
+      }
+    }
+    @media (max-width: 1000px) {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+    @media (max-width: 768px) {
+      padding: 24px 24px 0;
+    }
+  }
+
+  &__present {
+    margin-top: 56px;
+    padding-bottom: 48px;
+    @media (max-width: 1450px) {
+      margin-left: -155px;
+    }
+    @media (max-width: 768px) {
+      margin-top: 40px;
+      margin-left: 0;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__products {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+    margin-bottom: 56px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__products-item {
+    flex-basis: 50%;
+    flex-grow: 1;
+
+    &:first-child {
+      margin-right: 32px;
+      @media (max-width: 768px) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__any {
+    position: relative;
+    max-width: 1588px;
+    margin: 0 auto;
+    padding-top: 48px;
+    padding-right: 155px;
+    padding-left: 155px;
+
+    &::after {
+      position: absolute;
+      width: calc(100% - 310px);
+      height: 1px;
+      background-color: #caced2;
+      content: "";
+      @media (max-width: 1000px) {
+        width: calc(100% - 240px);
+      }
+      @media (max-width: 768px) {
+        width: calc(100% - 48px);
+      }
+    }
+    @media (max-width: 1000px) {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+    @media (max-width: 768px) {
+      padding: 24px 24px 0;
+    }
+  }
+}

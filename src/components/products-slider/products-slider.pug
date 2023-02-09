@@ -1,0 +1,38 @@
+include ../button/button.pug
+include ../product-card/product-card.pug
+
+mixin products-slider(options = {})
+  - 
+    const { 
+      title = '',
+    } = options
+
+  .products-slider
+    .products-slider__content
+      .products-slider__title-block
+        p.products-slider__title= title
+        .products-slider__button
+          +button({
+            style: 'texted',
+            name: 'button',
+            text: 'Смотреть\u00A0все',
+            type: 'button'
+          })
+      .products-slider__slider.js-products-slider__slider
+        .products-slider__slider-item
+          +product-card({imgName: 'product1', title: 'Антибактериальный гель Yuzhnaya kozha 386 ml', price: "3000", note: 'Бестселлер', backgroundColor: 'blue'})
+        .products-slider__slider-item
+          +product-card({imgName: 'product2', title: 'Антибактериальный гель Yuzhnaya kozha 386 ml', price: "3000", backgroundColor: 'yellow'})
+        .products-slider__slider-item
+          +product-card({imgName: 'product3', title: 'Антибактериальный гель Yuzhnaya kozha 386 ml', price: "3000", oldPrice: "5000", note: 'Скидка 25%', backgroundColor: 'grey'})
+        .products-slider__slider-item
+          +product-card({imgName: 'product1', title: 'Антибактериальный гель Yuzhnaya kozha 386 ml', price: "3000", note: 'Скидка 25%', backgroundColor: 'blue'})
+        .products-slider__slider-item
+          +product-card({imgName: 'product2', title: 'Антибактериальный гель Yuzhnaya kozha 386 ml', price: "3000", note: 'Скидка 25%', backgroundColor: 'yellow'})
+        .products-slider__slider-item
+          +product-card({imgName: 'product3', title: 'Антибактериальный гель Yuzhnaya kozha 386 ml', price: "3000", note: 'Скидка 25%', backgroundColor: 'grey'})
+
+
+
+
+

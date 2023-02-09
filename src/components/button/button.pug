@@ -1,0 +1,56 @@
+mixin button(options = {})
+  - 
+    const { 
+      style = 'bordered',
+      icon = '',
+      size = '',
+      length = '',
+      color = '',
+      text = 'Купить',
+      notificationText = null,
+      type = 'button',
+      name = false,
+      href = false
+    } = options;
+    const sizeModifiers = {
+      small: 'button_size_small',
+      big: 'button_size_big'
+    }
+    const styleModifiers = {
+      bordered: 'button_bordered',
+      texted: 'button_texted',
+      withIcon: 'button_icon',
+      withIconAndText: 'button_icon__text',
+      solid: 'button_solid',
+    }
+    const iconModifiers = {
+      profile: 'button_icon_profile',
+      basket: 'button_icon_basket',
+    }
+    const colorModifiers = {
+      violent: 'button_color_violent',
+      black: 'button_color_black'
+    }
+    const lengthModifiers = {
+      long: 'button_size_long',
+    }
+    const classes = [
+      sizeModifiers[size],
+      styleModifiers[style],
+      colorModifiers[color],
+      lengthModifiers[length],
+      iconModifiers[icon],
+    ]
+    const tag = type === 'reference' ? 'a' : 'button';
+    const buttonType = type === 'reference' ? false : type;
+    const buttonName = type === 'reference' ? false : name;
+    const referenceLink = type === 'reference' ? href : false;
+
+  #{tag}( 
+    type = buttonType
+    name = buttonName
+    href = referenceLink
+    class = classes
+  ).button.js-button #{text}
+    if notificationText
+      span.button__notification #{notificationText}

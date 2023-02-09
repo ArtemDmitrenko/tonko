@@ -1,0 +1,14 @@
+mixin advantages(options = {})
+  - 
+    const { 
+      advantagesDesktop = [],
+      advantagesMobile = []
+    } = options
+
+  .advantages
+    ul.advantages__content.advantages__content_type_desktop
+      each desktopItem in advantagesDesktop
+        li.advantages__item= desktopItem
+    ul.advantages__content.advantages__content_type_mobile
+      each mobileItem in advantagesMobile
+        li.advantages__item= mobileItem

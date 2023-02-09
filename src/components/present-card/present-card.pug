@@ -1,0 +1,35 @@
+include ../button/button.pug
+
+mixin present-card(options = {})
+  - 
+    const { 
+      title = '',
+      descriptions = '',
+      imgName = '',
+      buttonText = 'Button'
+    } = options
+
+  .present-card
+    .present-card__content
+      .present-card__image-block
+        img(
+          src=`./images/${imgName}.jpg`
+          alt=`Present ${imgName}`
+        ).present-card__image
+      .present-card__text-block
+        p.present-card__title= title
+        ul.present-card__descriptions-list
+          each item in descriptions
+            li.present-card__description= item
+
+
+        p.present-card__description= description
+        +button({
+          style: 'bordered',
+          name: 'button',
+          text: buttonText,
+          type: 'submit'
+        })
+
+
+

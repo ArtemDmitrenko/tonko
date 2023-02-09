@@ -1,0 +1,108 @@
+include ../button/button.pug
+include ../logo/logo.pug
+include ../nav-menu/nav-menu.pug
+
+mixin header(options = {})
+  - const { modifier = 'registered' } = options
+  - 
+    const menuItems = [
+    {
+      title: "Продукция",
+      submenu: [
+        {
+          subtitle: "Свечи",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Диффузоры",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Парфюм для дома",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Саше",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Уход для рук",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Уход для тела",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Наборы",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Вся продукция",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Новинки",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Бестселлеры",
+          sublink: "https://www.mock-link.com/"
+        },
+        {
+          subtitle: "Outlet",
+          sublink: "https://www.mock-link.com/"
+        }
+      ],
+    },
+    {
+      title: "Мир тонка",
+      link: "https://www.mock-link.com/"
+    },
+    {
+      title: "Для компаний",
+      link: "https://www.mock-link.com/"
+    },
+    {
+      title: "Контактное производство",
+      link: "https://www.mock-link.com/"
+    },
+    {
+      title: "Аромамаркетинг",
+      link: "https://www.mock-link.com/"
+    },
+    {
+      title: "Где купить",
+      link: "https://www.mock-link.com/"
+    }]
+  //- - const menuItems = require('./menu-items.json')
+
+  header.header.js-header
+    .header__container.js-header__container
+      .header__content
+        .header__contacts 
+          a(href='tel:+79857661289').header__phone +7 985 766 12 89
+        .header__main
+          .header__logo 
+            +logo()
+          .header__menu
+            +nav-menu({menuItems})
+
+        .header__user
+          if modifier === 'registered'
+            +button({
+              style: 'withIcon',
+              icon: 'profile',
+              name: 'button',
+              text: '',
+              type: 'button'
+            })
+            +button({
+              style: 'withIcon',
+              icon: 'basket',
+              name: 'button',
+              text: '',
+              type: 'button'
+            })
+        .header__burger.js-header__burger
+          span.header__burger-element

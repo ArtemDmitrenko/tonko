@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Продукция",
+    "submenu": [
+      {
+        "subtitle": "Свечи",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Диффузоры",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Парфюм для дома",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Саше",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Уход для рук",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Уход для тела",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Наборы",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Вся продукция",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Новинки",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Бестселлеры",
+        "sublink": "https://www.mock-link.com/"
+      },
+      {
+        "subtitle": "Outlet",
+        "sublink": "https://www.mock-link.com/"
+      }
+    ]
+  },
+  {
+    "title": "Мир тонка",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Мирыапкппепкркрекн",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Для компаний",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Контактное производство",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Аромамаркетинг",
+    "link": "https://www.mock-link.com/"
+  },
+  {
+    "title": "Где купить",
+    "link": "https://www.mock-link.com/"
+  }
+]
