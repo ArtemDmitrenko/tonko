@@ -1,6 +1,8 @@
 include ../button/button.pug
 include ../logo/logo.pug
 include ../nav-menu/nav-menu.pug
+include ../sub-header/sub-header.pug
+include ../header-minimized/header-minimized.pug
 
 mixin header(options = {})
 
@@ -38,6 +40,8 @@ mixin header(options = {})
         .header__lower-part
           .header__menu
             +nav-menu({menuItems})
+    +sub-header()
+
 
     .header__mobile-menu.js-header__mobile-menu
       nav.header__mobile-menu-block
@@ -67,5 +71,6 @@ mixin header(options = {})
         .header__mobile-menu-contacts-right
           a(href='tel:+79857661289').footer__phone +7 985 766 12 89
 
-
+    .header__minimized-header.js-header__minimized-header
+      +header-minimized()
 

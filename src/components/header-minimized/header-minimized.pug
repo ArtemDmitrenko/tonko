@@ -1,17 +1,18 @@
 include ../button/button.pug
 include ../nav-menu/nav-menu.pug
+include ../sub-header/sub-header.pug
 
 mixin header-minimized(options = {})
 
   - const { modifier = 'registered' } = options
 
-  header.header-minimized
+  .header-minimized
     .header-minimized__container
       .header-minimized__content
         .header-minimized__nav-menu
           .header-minimized__logo
             img.logo__img(src='../../components/header-minimized/minimized-logo.svg' alt='logo')
-          .header-minimized__menu
+          .header-minimized__menu.js-header-minimized__menu
             +nav-menu({menuItems})
 
         .header-minimized__user-block
@@ -32,27 +33,15 @@ mixin header-minimized(options = {})
                 text: '12 000 руб.',
                 type: 'button'
               })
-       
 
-    //- .header-minimized__mobile-menu.js-header-minimized__mobile-menu
-    //-   nav.header-minimized__mobile-menu-block
-    //-     ul.header-minimized__mobile-mene-list
-    //-       each item in menuItems
-    //-         - const { title, link, submenu } = item
-    //-         if !submenu
-    //-           li.header-minimized__mobile-menu-item
-    //-             a.header-minimized__mobile-menu-link(href = link)= title
-    //-         else
-    //-           li.header-minimized__mobile-menu-item_with-sublist
-    //-             button.header-minimized__mobile-menu-list-button.js-header-minimized__mobile-menu-list-button= title
-    //-             ul.header-minimized__mobile-menu-sublist.js-header-minimized__mobile-menu-sublist
-    //-               each subItem in submenu
-    //-                 - const { subtitle, sublink, isBold } = subItem
-    //-                 li.header-minimized__mobile-menu-sub-item
-    //-                   a(href = sublink class = isBold ? "header-minimized__mobile-menu-sub-link_bold" : "").header-minimized__mobile-menu-sub-link= subtitle
+      .header-minimized__sub-header.js-header-minimized__sub-header
+        +sub-header()
 
 
-     
+
+
+
+
 
 
 

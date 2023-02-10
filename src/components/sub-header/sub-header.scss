@@ -1,0 +1,122 @@
+.sub-header {
+  height: 65px;
+  background-color: #f2f5f8;
+  @media (max-width: 830px) {
+    height: 49px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    max-width: 1652px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 75px;
+
+    @media (max-width: 930px) {
+      padding: 0 24px;
+    }
+    @media (max-width: 830px) {
+      padding: 0 16px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &__content-mobile {
+    display: none;
+    width: 100%;
+    @media (max-width: 1280px) {
+      display: block;
+    }
+
+    & .slick-slide {
+      display: flex;
+      justify-content: center;
+      margin-right: 16px;
+    }
+  }
+
+  &__main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__additional-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: max-content;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.5;
+      transition: $transition;
+    }
+
+    &::before,
+    &::after {
+      width: max-content;
+      text-decoration: inherit;
+      content: attr(aria-label);
+    }
+
+    &::before {
+      font-weight: 450;
+      visibility: hidden;
+      opacity: 0.5;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    @media (max-width: 830px) {
+      font-weight: 450;
+    }
+
+    &_active {
+      &::before {
+        visibility: visible;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+}

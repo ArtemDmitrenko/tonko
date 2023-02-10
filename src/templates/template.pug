@@ -1,0 +1,22 @@
+include ../components/header/header.pug
+include ../components/footer/footer.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="description" content="Лучшая косметика в России")
+    meta(name="keywords" content="интерьерные селективные ароматы для дома премиум класс люкс элитный парфюм дорогой подарок")
+    <link rel="stylesheet" type="text/css" href="../../../node_modules/slick-carousel/slick/slick.css"/>
+    block title
+  body.page
+    block header 
+      +header()
+
+    block main
+
+    block footer
+      +footer()
+
+    block script

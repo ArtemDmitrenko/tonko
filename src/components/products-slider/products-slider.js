@@ -13,6 +13,7 @@ export default class ProductsSlider {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 3,
+      arrows: true,
       prevArrow: '<button class="products-slider__slider-button products-slider__slider-button_prev"></button>',
       nextArrow: '<button class="products-slider__slider-button products-slider__slider-button_next"></button>',
       responsive: [

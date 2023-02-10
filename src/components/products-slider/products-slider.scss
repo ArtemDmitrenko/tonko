@@ -66,8 +66,8 @@
     cursor: pointer;
     transition: $transition;
 
-    @media (max-width: 769px) {
-      display: none;
+    @media (max-width: 768px) {
+      display: none !important;
     }
 
     &_prev {

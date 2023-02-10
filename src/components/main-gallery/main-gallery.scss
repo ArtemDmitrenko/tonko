@@ -1,10 +1,6 @@
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
 .main-gallery {
-  @media (max-width: 830px) {
-    padding-top: 52px;
-  }
-
   &__slider {
     position: relative;
   }

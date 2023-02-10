@@ -1,14 +1,15 @@
 import MobileSubmenu from './mobileSubmenu'
 
+
 export default class Header {
   constructor(item, handleBurgerMenuClick) {
     this.item = item;
     this.handleBurgerMenuClick = handleBurgerMenuClick
-    this.init();
+    this.findElements();
     this.addEventListeners();
   }
 
-  init() {
+  findElements() {
     this.burger = this.item.querySelector(".js-header__burger");
     this.mobileMenu = this.item.querySelector(".js-header__mobile-menu");
     this.mobileSubmenuButtons = this.item.querySelectorAll(".js-header__mobile-menu-list-button");

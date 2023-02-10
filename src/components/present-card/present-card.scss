@@ -7,10 +7,10 @@
   }
 
   &__image-block {
-    max-width: 840px;
+    width: 840px;
     height: 500px;
     @media (max-width: 768px) {
-      max-width: none;
+      width: auto;
       height: 259px;
       margin: 0 -24px;
     }

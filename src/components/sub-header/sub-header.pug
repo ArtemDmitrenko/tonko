@@ -1,0 +1,33 @@
+include ../button/button.pug
+include ../nav-menu/nav-menu.pug
+
+mixin sub-header(options = {})
+
+  - 
+    const { modifier = 'registered' } = options
+
+  .sub-header.js-sub-header
+    .sub-header__container
+      .sub-header__content.js-sub-header__content
+        ul.sub-header__main-menu
+          each item in subHeaderMenuLeft
+            - const { title, link, isActive } = item
+            li.sub-header__item
+              a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")
+        ul.sub-header__additional-menu
+          each item in subHeaderMenuRight
+            - const { title, link, isActive } = item
+            li.sub-header__item
+              a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")
+
+
+      .sub-header__content-mobile
+        ul.sub-header__main-menu-mobile.js-sub-header__content-mobile
+          each item in subHeaderMenuLeft
+            - const { title, link, isActive } = item
+            li.sub-header__item
+              a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")
+          each item in subHeaderMenuRight
+            - const { title, link, isActive } = item
+            li.sub-header__item
+              a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")
