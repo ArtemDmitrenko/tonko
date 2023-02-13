@@ -5,13 +5,14 @@ include ../sub-header/sub-header.pug
 mixin header-minimized(options = {})
 
   - const { modifier = 'registered' } = options
+  - const menuItems = require("../../components/header/menu-items.json");
 
   .header-minimized
     .header-minimized__container
       .header-minimized__content
         .header-minimized__nav-menu
           .header-minimized__logo
-            img.logo__img(src='../../components/header-minimized/minimized-logo.svg' alt='logo')
+            img.logo__img(src=require('../../components/header-minimized/minimized-logo.svg') alt='logo')
           .header-minimized__menu.js-header-minimized__menu
             +nav-menu({menuItems})
 

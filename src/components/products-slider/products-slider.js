@@ -1,6 +1,4 @@
-import "../../import-jquery"
 import "slick-carousel";
-
 
 export default class ProductsSlider {
   constructor(item) {
@@ -14,8 +12,10 @@ export default class ProductsSlider {
       slidesToShow: 3,
       slidesToScroll: 3,
       arrows: true,
-      prevArrow: '<button class="products-slider__slider-button products-slider__slider-button_prev"></button>',
-      nextArrow: '<button class="products-slider__slider-button products-slider__slider-button_next"></button>',
+      prevArrow:
+        '<button class="products-slider__slider-button products-slider__slider-button_prev"></button>',
+      nextArrow:
+        '<button class="products-slider__slider-button products-slider__slider-button_next"></button>',
       responsive: [
         {
           breakpoint: 1280,
@@ -23,17 +23,17 @@ export default class ProductsSlider {
             arrows: true,
             slidesToShow: 2,
             slidesToScroll: 2,
-            variableWidth: false
-          }
-        },    
+            variableWidth: false,
+          },
+        },
         {
           breakpoint: 768,
           settings: {
             arrows: false,
             slidesToShow: 2,
             slidesToScroll: 2,
-            variableWidth: true
-          }
+            variableWidth: true,
+          },
         },
         {
           breakpoint: 660,
@@ -41,10 +41,10 @@ export default class ProductsSlider {
             arrows: false,
             slidesToShow: 1,
             slidesToScroll: 1,
-            variableWidth: true
-          }
-        }
-      ]
+            variableWidth: true,
+          },
+        },
+      ],
     });
   }
 }

@@ -12,7 +12,7 @@ mixin product-card-ads(options = {})
     .product-card-ads__content
       .product-card-ads__image-block
         img(
-          src=`./images/${imgName}.jpg`
+          src=require(`./images/${imgName}.jpg`)
           alt=`${imgName}`
         ).product-card-ads__image
       .product-card-ads__text-block

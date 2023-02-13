@@ -4,6 +4,6 @@ mixin nav-menu(options = {})
   nav.nav-menu.js-nav-menu
     ul.nav-menu__list
       each item in menuItems
-        - const { title, link, submenu } = item
+        - const { title, link } = item
         li.nav-menu__item
           a.nav-menu__link.js-nav-menu__link(href = link)= title

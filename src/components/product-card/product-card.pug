@@ -23,7 +23,7 @@ mixin product-card(options = {})
     .product-card__content
       .product-card__image-block(class = backgroundClass)
         img(
-          src=`./images/${imgName}.png`
+          src=require(`../../pages/index/images/${imgName}.png`)
           alt=`Product image ${imgName}`
         ).product-card__image
         if note 

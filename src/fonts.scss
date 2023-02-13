@@ -7,6 +7,7 @@ $address: "../../fonts";
   src: url("#{$address}/#{$file-name}.eot");
   src: local("☺"), url("#{$address}/#{$file-name}.woff") format("woff"),
     url("#{$address}/#{$file-name}.ttf") format("truetype");
+
   // url("#{$address}/#{$file-name}.svg") format("svg");
 }
 

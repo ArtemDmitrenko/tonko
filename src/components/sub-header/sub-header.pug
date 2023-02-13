@@ -1,10 +1,7 @@
-include ../button/button.pug
-include ../nav-menu/nav-menu.pug
-
 mixin sub-header(options = {})
-
-  - 
-    const { modifier = 'registered' } = options
+  - const { modifier = 'registered' } = options
+  - const subHeaderMenuLeft = require("../../components/sub-header/subHeaderMenuLeft.json");
+  - const subHeaderMenuRight = require("../../components/sub-header/subHeaderMenuRight.json");
 
   .sub-header.js-sub-header
     .sub-header__container

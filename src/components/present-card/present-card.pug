@@ -13,7 +13,7 @@ mixin present-card(options = {})
     .present-card__content
       .present-card__image-block
         img(
-          src=`./images/${imgName}.jpg`
+          src=require(`../../pages/index/images/${imgName}.jpg`)
           alt=`Present ${imgName}`
         ).present-card__image
       .present-card__text-block
