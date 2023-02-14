@@ -45,6 +45,10 @@
     font-family: $font-family;
     line-height: 120%;
     text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 1080px) {
       margin-bottom: 16px;
     }
@@ -58,6 +62,10 @@
     font-family: $font-family;
     line-height: 120%;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &::before {
       margin-right: 8px;
@@ -78,6 +86,10 @@
     line-height: 120%;
     cursor: pointer;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     &::before {
       margin-right: 8px;
       vertical-align: middle;
@@ -95,6 +107,10 @@
     font-family: $font-family;
     line-height: 120%;
     cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     &::before {
       margin-right: 8px;
@@ -122,6 +138,10 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 120%;
+
+    &:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 575px) {
       font-weight: 500;
       font-size: 12px;

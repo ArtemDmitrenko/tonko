@@ -58,13 +58,13 @@
   }
 
   &__slider-button {
+    top: 177.5px;
     width: 44px;
     height: 44px;
     background: white;
     border: 1px solid $primary-color;
     border-radius: 50%;
     cursor: pointer;
-    transition: $transition;
 
     @media (max-width: 768px) {
       display: none !important;
@@ -72,7 +72,6 @@
 
     &_prev {
       position: absolute;
-      top: 50%;
       left: 0;
       margin-left: -50px;
       transform: translateY(-50%);
@@ -100,7 +99,6 @@
 
     &_next {
       position: absolute;
-      top: 50%;
       right: 0;
       margin-right: -50px;
       transform: translateY(-50%);

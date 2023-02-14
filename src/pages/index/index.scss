@@ -1,19 +1,19 @@
 @import "../../fonts";
 @import "../../variables";
 @import "../../global";
-@import "../../components/logo/logo";
-@import "../../components/button/button";
-@import "../../components/header/header";
-@import "../../components/sub-header/sub-header";
-@import "../../components/header-minimized/header-minimized";
-@import "../../components/nav-menu/nav-menu";
-@import "../../components/main-gallery/main-gallery";
-@import "../../components/advantages/advantages";
-@import "../../components/product-card/product-card";
-@import "../../components/present-card/present-card";
-@import "../../components/product-card-ads/product-card-ads";
-@import "../../components/products-slider/products-slider";
-@import "../../components/footer/footer";
+@import "@Components/logo/logo";
+@import "@Components/button/button";
+@import "@Components/header/header";
+@import "@Components/sub-header/sub-header";
+@import "@Components/header-minimized/header-minimized";
+@import "@Components/nav-menu/nav-menu";
+@import "@Components/main-gallery/main-gallery";
+@import "@Components/advantages/advantages";
+@import "@Components/product-card/product-card";
+@import "@Components/present-card/present-card";
+@import "@Components/product-card-ads/product-card-ads";
+@import "@Components/products-slider/products-slider";
+@import "@Components/footer/footer";
 
 .home {
   flex: 1 0 auto;
@@ -25,6 +25,7 @@
   }
 
   &__advantages {
+    @include reveal-on-scroll-animation-start;
     position: relative;
     max-width: 1588px;
     margin: 0 auto;
@@ -81,6 +82,10 @@
     @media (max-width: 768px) {
       padding: 24px 24px 0;
     }
+
+    &_visible {
+      @include reveal-on-scroll-animation-finish;
+    }
   }
 
   &__special-offers {
@@ -116,11 +121,20 @@
   &__present {
     margin-top: 56px;
     padding-bottom: 48px;
+    @include reveal-on-scroll-animation-start;
+
     @media (max-width: 1450px) {
+      margin-right: -155px;
       margin-left: -155px;
     }
+    @media (max-width: 1000px) {
+      margin-right: -120px;
+      margin-left: -120px;
+    }
+
     @media (max-width: 768px) {
       margin-top: 40px;
+      margin-right: 0;
       margin-left: 0;
       padding-bottom: 40px;
     }
@@ -130,6 +144,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 56px;
+    @include reveal-on-scroll-animation-start;
     margin-bottom: 56px;
     @media (max-width: 768px) {
       flex-direction: column;
@@ -149,6 +164,10 @@
         margin-bottom: 40px;
       }
     }
+  }
+
+  &__products-slider {
+    @include reveal-on-scroll-animation-start;
   }
 
   &__any {
@@ -179,5 +198,9 @@
     @media (max-width: 768px) {
       padding: 24px 24px 0;
     }
+  }
+
+  &_animated-element-visible {
+    @include reveal-on-scroll-animation-finish;
   }
 }

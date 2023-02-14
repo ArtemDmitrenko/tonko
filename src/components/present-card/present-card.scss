@@ -7,9 +7,12 @@
   }
 
   &__image-block {
+    flex-basis: 50%;
     width: 840px;
     height: 500px;
+
     @media (max-width: 768px) {
+      flex-basis: unset;
       width: auto;
       height: 259px;
       margin: 0 -24px;
@@ -24,12 +27,14 @@
 
   &__text-block {
     display: flex;
+    flex-basis: 50%;
     flex-direction: column;
     align-items: self-start;
     justify-content: center;
-    margin-left: 36px;
+    padding-left: 36px;
     @media (max-width: 768px) {
-      margin-left: 0;
+      flex-basis: unset;
+      padding-left: 0;
     }
   }
 

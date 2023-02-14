@@ -18,24 +18,24 @@ block main
   main.home
     section.home__gallery.js-home__gallery
       +main-gallery()
-    section.home__advantages
+    section.home__advantages.js-reveal-animation
       +advantages({advantagesDesktop: ['Премиальное качество и натуральные ингредиенты', 'Персонализация свечей и диффузоров на любом языке', 'Ароматические композиции от ведущих французских парфюмеров'], advantagesMobile: ['Персонализация подарка', 'Премиальное качество', 'Всемирно известные парфюмеры']})
     section.home__new-products
-      .home__products-slider.js-home__products-slider
+      .home__products-slider.js-home__products-slider.js-reveal-animation
         +products-slider({title: 'Новинки'})
-      .home__present
+      .home__present.js-reveal-animation
         +present-card({imgName: 'present', title: 'Добавьте индивидуальность подарку', descriptions: ["Выберите свечу или диффузор из коллекции", "Укажите имя или пожелание для гравировки", "Выберите подарочную упаковку"], buttonText: "Выбрать подарок"})
     section.home__special-offers
-      .home__products-slider.js-home__products-slider
+      .home__products-slider.js-home__products-slider.js-reveal-animation
         +products-slider({title: 'Специальные предложения'})
-      .home__products
+      .home__products.js-reveal-animation
         .home__products-item
           +product-card-ads({imgName: 'ads2', title: 'Свечи', description: "Достаточно зажечь, и дом наполнится роскошным ароматом"})
         .home__products-item
           +product-card-ads({imgName: 'ads1', title: 'Диффузоры', description: "Изящное решение для долговременной ароматизации"})
     section.home__any
-      .home__products-slider.js-home__products-slider
+      .home__products-slider.js-home__products-slider.js-reveal-animation
         +products-slider({title: 'Здесь может быть любая подборка'})
-      .home__present
+      .home__present.js-reveal-animation
         +present-card({imgName: 'corporate', title: 'Предложение для корпоративных клиентов', descriptions: ["Выберите свечу или диффузор из коллекции", "Укажите имя или пожелание для гравировки", "Выберите подарочную упаковку"], buttonText: "Подробнее"})
 

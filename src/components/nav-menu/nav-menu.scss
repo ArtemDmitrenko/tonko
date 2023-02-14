@@ -23,11 +23,9 @@
     letter-spacing: 0.01em;
     text-transform: uppercase;
     cursor: pointer;
-    transition: $transition;
 
     &:hover {
       opacity: 0.5;
-      transition: $transition;
     }
   }
 }

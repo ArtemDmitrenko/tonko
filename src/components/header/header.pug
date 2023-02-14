@@ -4,12 +4,9 @@ include ../nav-menu/nav-menu.pug
 include ../sub-header/sub-header.pug
 include ../header-minimized/header-minimized.pug
 
-
-
 mixin header(options = {})
   - const { modifier = 'registered' } = options
   - const menuItems = require("../../components/header/menu-items.json");
-
 
   header.header.js-header
     .header__container

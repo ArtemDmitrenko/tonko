@@ -22,10 +22,11 @@ mixin product-card(options = {})
   .product-card
     .product-card__content
       .product-card__image-block(class = backgroundClass)
-        img(
-          src=require(`../../pages/index/images/${imgName}.png`)
-          alt=`Product image ${imgName}`
-        ).product-card__image
+        .product-card__image-container
+          img(
+            src=require(`../../pages/index/images/${imgName}.png`)
+            alt=`Product image ${imgName}`
+          ).product-card__image
         if note 
           span.product-card__note= note
       .product-card__text-block

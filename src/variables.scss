@@ -1,3 +1,14 @@
 $primary-color: #3c3c3c;
 $transition: all 0.3s ease-in-out;
 $font-family: "Futura PT", "Arial";
+
+@mixin reveal-on-scroll-animation-start {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+@mixin reveal-on-scroll-animation-finish {
+  transform: none;
+  opacity: 1;
+}
