@@ -4,6 +4,7 @@
     margin-bottom: 24px;
     @media (max-width: 768px) {
       justify-content: space-between;
+      margin-bottom: 16px;
     }
   }
 
@@ -28,9 +29,6 @@
       @media (max-width: 768px) {
         display: none;
       }
-    }
-    @media (max-width: 768px) {
-      margin-bottom: 16px;
     }
   }
 

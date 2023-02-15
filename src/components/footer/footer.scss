@@ -55,6 +55,8 @@
   }
 
   &__button-call {
+    display: flex;
+    align-items: center;
     margin-right: 16px;
     color: $primary-color;
     font-weight: 400;
@@ -68,8 +70,9 @@
     }
 
     &::before {
+      display: block;
+      height: 25px;
       margin-right: 8px;
-      vertical-align: middle;
       content: url("../../components/footer/call.svg");
     }
     @media (max-width: 1080px) {
@@ -78,6 +81,8 @@
   }
 
   &__button-whatsapp {
+    display: flex;
+    align-items: center;
     margin-right: 16px;
     color: $primary-color;
     font-weight: 400;
@@ -91,8 +96,9 @@
     }
 
     &::before {
+      display: block;
+      height: 24px;
       margin-right: 8px;
-      vertical-align: middle;
       content: url("../../components/footer/whatsup.svg");
     }
     @media (max-width: 1080px) {
@@ -101,6 +107,8 @@
   }
 
   &__button-email {
+    display: flex;
+    align-items: center;
     color: $primary-color;
     font-weight: 400;
     font-size: 14px;
@@ -113,8 +121,9 @@
     }
 
     &::before {
+      display: block;
+      height: 24px;
       margin-right: 8px;
-      vertical-align: middle;
       content: url("../../components/footer/email.svg");
     }
   }

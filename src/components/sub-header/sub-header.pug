@@ -17,14 +17,3 @@ mixin sub-header(options = {})
             li.sub-header__item
               a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")
 
-
-      .sub-header__content-mobile
-        ul.sub-header__main-menu-mobile.js-sub-header__content-mobile
-          each item in subHeaderMenuLeft
-            - const { title, link, isActive } = item
-            li.sub-header__item
-              a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")
-          each item in subHeaderMenuRight
-            - const { title, link, isActive } = item
-            li.sub-header__item
-              a.sub-header__link.js-sub-header__link(aria-label = title href = link class = isActive ? "sub-header__link_active" : "")

@@ -93,8 +93,8 @@
 
   &__note {
     position: absolute;
-    top: 8%;
-    left: 10%;
+    top: 32px;
+    left: 30.6px;
     padding: 4px 8px;
     color: $primary-color;
     font-weight: 450;
@@ -105,6 +105,8 @@
     background: #fff;
     border-radius: 4px;
     @media (max-width: 768px) {
+      top: 16px;
+      left: 16px;
       font-size: 11px;
     }
   }

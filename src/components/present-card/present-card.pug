@@ -21,9 +21,6 @@ mixin present-card(options = {})
         ul.present-card__descriptions-list
           each item in descriptions
             li.present-card__description= item
-
-
-        p.present-card__description= description
         +button({
           style: 'bordered',
           name: 'button',

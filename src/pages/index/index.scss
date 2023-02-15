@@ -18,12 +18,6 @@
 .home {
   flex: 1 0 auto;
 
-  &__gallery {
-    @media (max-width: 830px) {
-      padding-top: 101px;
-    }
-  }
-
   &__advantages {
     @include reveal-on-scroll-animation-start;
     position: relative;
